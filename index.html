@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="selectContainer">
+      <h4>Select City</h4>
+      <select id="city">
+        <option disabled selected value="0">Select a city</option>
+        <option value="London">London</option>
+        <option value="Paris">Paris</option>
+        <option value="New York">New York</option>
+        <option value="Beirut">Beirut</option>
+        <option value="Dubai">Dubai</option>
+        <option value="Cairo">Cairo</option>
+      </select>
+    </div>
+
+    <div id="forecastContainer"></div>
+
+    <div id="city-name"></div>
+    <p id="results"></p>
+    <center>
+      <div class="plotContainer">
+        <canvas id="plot" width="200"></canvas>
+      </div>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/weather_codes.js"></script>
+    <script src="js/index.js" defer></script>
+  </body>
+</html>

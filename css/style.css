@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --sans: "Inter", sans-serif;
+
+  --crust: #dce0e8;
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --text: #4c4f69;
+  --surface1: #bcc0cc;
+  --surface2: #acb0be;
+  --overlay0: #9ca0b0;
+  --overlay2: #7c7f93;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--sans);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--base);
+  color: var(--text);
+  font-size: 16px;
+  font-family: var(--sans);
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.selectContainer > * {
+  margin: 0.5rem 0;
+}
+
+.selectContainer select {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: var(--sans);
+  border: 1px solid var(--crust);
+  background-color: var(--surface2);
+  min-width: 10rem;
+}
+
+#forecastContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  width: 90%;
+  overflow-x: scroll;
+  gap: 1.5rem;
+  margin: 0 5rem;
+}
+
+.currentForecastCard {
+  display: flex;
+  flex-direction: row;
+  align-items: felx-start;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1rem 1rem;
+  background-color: var(--surface1);
+  width: fit-content;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease-in-out;
+  height: 18rem;
+}
+
+.currentForecastCard:hover {
+  transform: translateY(-0.5rem);
+  transition: transform 0.2s ease-in-out;
+}
+
+.currentForecastCard p {
+  margin: 0;
+  margin-bottom: 0.7rem;
+}
+
+.currentForecastCard .currentTemp {
+  font-weight: 900;
+  margin: 1rem 0;
+  margin-bottom: 0.25rem;
+  font-size: 3rem;
+}
+
+.feelsLike {
+  font-style: italic;
+}
+
+.currentForecastCard .forecastImage {
+  width: 10rem;
+  height: 10rem;
+}
+
+.dailyForecastCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1rem 0.6rem;
+  background-color: var(--overlay0);
+  width: fit-content;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease-in-out;
+  height: 18rem;
+  width: 12rem;
+}
+
+.dailyForecastCard:hover {
+  transform: translateY(-0.5rem);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dailyForecastCard .forecastImage {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.dailyForecastCard .currentTemp {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.dailyForecastCard p {
+  margin: 0.7rem 0;
+}
+.minTemp {
+  font-size: 0.75rem;
+}
+
+.plotContainer {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
