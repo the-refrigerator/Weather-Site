@@ -25,7 +25,7 @@ document.getElementById("city").addEventListener("change", async () => {
   const weather_code =
     codes[data.current.weather_code][data.current.is_day ? "day" : "night"];
   const currentTime = await fetch(
-    `http://worldtimeapi.org/api/timezone/${coords[2]}`,
+    `https://worldtimeapi.org/api/timezone/${coords[2]}`,
   )
     .then((response) => response.json())
     .then((data) => {
